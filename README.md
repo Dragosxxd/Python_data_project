@@ -152,11 +152,11 @@ ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y / 1000)}
 - The Machine Learning Engineer has lowest median salary , being very close to the Data Analyst jobs in Europe
 - The Senior Data Analyst doesn't appear on the list, and the conclusion that we can draw from this is that after you gain experiecne as a Data Analyst, you can try to access different fields that are payed better, such as Data Scientist or Data Engineer
 
-### Highest Paid & Most Demanded Skills for Data Analysts
+# Highest Paid & Most Demanded Skills for Data Analysts
 
 Here we have a breakdown on how The Most Demanded Skills pay vs. The Best Paying Skills.
 
-# The code needed:
+## The code needed:
 ```python
 fig,ax = plt.subplots(2,1)
 sns.barplot(data = top_pay , x= 'median' , y = 'job_skills' ,hue = 'median',  ax = ax[0] , palette= 'dark:r_r' , legend = False)
