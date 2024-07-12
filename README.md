@@ -205,7 +205,7 @@ plt.title(f'Most Optimal Skills for Data Analysts in Europe')
 plt.tight_layout()
 ```
 ## Results 
-![Optimal_Skills](Images\Optimal_Skills_1.png)
+![Optimal_Skills](Images/Optimal_Skills_1.png)
 Here we have the base of the visualisation that we are going to improve to get even more insights for the next part
 
 ## Insights 
