@@ -86,7 +86,7 @@ for i,job_title in enumerate(job_titles):
     sns.barplot(data = df_plot , x='skills_percent',y='job_skills',ax = ax[i] , hue = 'skill_count',legend = False)
 ```
 ## Results 
-![Skills_Demand.png](Images\Skills_Demand.png)
+![Skills_Demand.png](Images/Skills_Demand.png)
 
 # Insights
 - As we can conclude from the graphs, the most versatile skill in this list is Python, being present in over *60%* of the Data Scientist jobs, in almost *60%* of the Data Enginner jobs, and in 1 of 3 data Analyst job
@@ -115,7 +115,7 @@ for i in range(5):
     plt.text(11.2, df_plot.iloc[-1, i], df_plot.columns[i], color='black')
 ```
 ## Results
-![Skill_Trend](Images\Skill_Trend.png)
+![Skill_Trend](Images/Skill_Trend.png)
 
 # Insights
 
@@ -144,4 +144,4 @@ ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y / 1000)}
 ```
 
 ### Results 
-![Salary.png](Images\Salary.png)
+![Salary.png](Images/Salary.png)
