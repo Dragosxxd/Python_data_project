@@ -239,5 +239,14 @@ A scatter plot visualizing the most optimal skills (high paying & high demand) f
 
 - This scatter plot presents the prevalence of ```programming``` and ```analyst tools``` skills among the top optimal Data Analytics skills , occuping 9 of the total of 14.
 - The other two categories of ```cloud``` and ```libraries``` skills (AWS,Azure, and Spark) tend to have the best pay but also the smallest presence among the job postings in Europe.
-- The plot shows that the ```programming``` and some of the analytical tools are the best places into this scatter plot, having a good pay and a good ammount of postings .
+- The plot shows that the ```programming``` and some of the analytical tools have the best places into this scatter plot, having a good pay and a good ammount of postings .
 
+
+# What I Learned
+Throughout this project, I deepened my understanding of the data analyst job market and enhanced my technical skills in Python, especially in data manipulation and visualization. Here are a few specific things I learned:
+- **Advanced Python Usage**: Utilizing libraries such as Pandas for data manipulation, Seaborn and Matplotlib for data visualization, and other libraries helped me perform complex data analysis tasks more efficiently.
+- **Data Cleaning Importance**: I learned that thorough data cleaning and preparation are crucial before any analysis can be conducted, ensuring the accuracy of insights derived from the data.
+- **Strategic Skill Analysis**: The project emphasized the importance of aligning one's skills with market demand. Understanding the relationship between skill demand, salary, and job availability allows for more strategic career planning in the tech industry.
+
+# Conclusion
+This project helped me understand what I am supposed to look for when looking for a job in the Data field. This project can act as a guide , for me and for other persons in Europe that want to get some help into what path in this domain is the most appropriate for them. As this market continues to change , more exploration is necessary, but this study can still act as a foundation for more specific research in the future. 
