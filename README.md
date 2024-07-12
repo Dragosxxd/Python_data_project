@@ -145,3 +145,42 @@ ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y / 1000)}
 
 ### Results 
 ![Salary.png](Images/Salary.png)
+
+### Insights
+
+- The jobs on the bottom of the graph tend to have the highest median salary, the highest paying jobs being Senior Data Engineer and Senior Data Scientist with median salaries of around $150k
+- The Machine Learning Engineer has lowest median salary , being very close to the Data Analyst jobs in Europe
+- The Senior Data Analyst doesn't appear on the list, and the conclusion that we can draw from this is that after you gain experiecne as a Data Analyst, you can try to access different fields that are payed better, such as Data Scientist or Data Engineer
+
+### Highest Paid & Most Demanded Skills for Data Analysts
+
+Here we have a breakdown on how The Most Demanded Skills pay vs. The Best Paying Skills.
+
+# The code needed:
+```python
+fig,ax = plt.subplots(2,1)
+sns.barplot(data = top_pay , x= 'median' , y = 'job_skills' ,hue = 'median',  ax = ax[0] , palette= 'dark:r_r' , legend = False)
+ax[0].set_title('Top 10 Highest Paid Skills For Data Analyst')
+ax[0].set_xlabel('')
+ax[0].set_ylabel('')
+ax[0].xaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y / 1000)}k'))
+
+sns.barplot(data = top_skills , x= 'median' , y = 'job_skills' , hue = 'median', ax = ax[1] , palette = 'dark:r_r' , legend = False)
+ax[1].set_title('Top 10 Most In-Demand Skills For Data Analyst')
+ax[1].xaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y / 1000)}k'))
+ax[1].set_xlabel('Median Salary(USD)')
+ax[1].set_xlabel('')
+ax[1].set_ylabel('')
+ax[1].invert_yaxis()
+ax[1].set_xlim(0,200000)
+```
+
+## Results
+![Highest_paid_vs_most_demanded](Images/Highest_Paid_And_Most_In_Demand_Skills.png)
+
+## Insights 
+
+- The jobs that pay the most appear much less than the ones that are most demanded on the job postings in Europe
+- The most demanded skills(*Python, SQL and Tableu*) are somewhere in the middle regarding the ammount employers are willing to pay
+- Airflow, Spark and AWS are the skills that are most demanded and pay the best
+
