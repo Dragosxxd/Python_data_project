@@ -89,9 +89,9 @@ for i,job_title in enumerate(job_titles):
 ![Skills_Demand.png](Images/Skills_Demand.png)
 
 # Insights
-- As we can conclude from the graphs, the most versatile skill in this list is Python, being present in over *60%* of the Data Scientist jobs, in almost *60%* of the Data Enginner jobs, and in 1 of 3 data Analyst job
-- On the second place we have sql, being equally as present as Python in the Data Engineer roles , the second most demanded skill for Data Scientist(*39%*) and the most demanded skill for Data Analysts(*45%*)
-- For the Data Analyst roles the visualisation tools are the ones that are next in the top of most demanded skills(*Power Bi, Tableu*), and for the Data Scientist and Data Enginner more practical skill for managing databases are important(*Aws, Azure*)
+- As we can conclude from the graphs, the most versatile skill in this list is ```Python```, being present in over *60%* of the ```Data Scientist jobs```, in almost *60%* of the ```Data Enginner``` jobs, and in 1 of 3 data Analyst job
+- On the second place we have sql, being equally as present as ```Python``` in the Data Engineer roles , the second most demanded skill for ```Data Scientist```(*39%*) and the most demanded skill for Data Analysts(*45%*)
+- For the ```Data Analyst``` roles the visualisation tools are the ones that are next in the top of most demanded skills(*Power Bi, Tableu*), and for the ```Data Scientist``` and ```Data Enginner``` more practical skill for managing databases are important(*```Aws```, ```Azure```*)
 
 
 # How are in-demand skills trending for Data Analysts?
@@ -148,9 +148,9 @@ ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y / 1000)}
 
 ### Insights
 
-- The jobs on the bottom of the graph tend to have the highest median salary, the highest paying jobs being Senior Data Engineer and Senior Data Scientist with median salaries of around $150k
-- The Machine Learning Engineer has lowest median salary , being very close to the Data Analyst jobs in Europe
-- The Senior Data Analyst doesn't appear on the list, and the conclusion that we can draw from this is that after you gain experiecne as a Data Analyst, you can try to access different fields that are payed better, such as Data Scientist or Data Engineer
+- The jobs on the bottom of the graph tend to have the highest median salary, the highest paying jobs being ```Senior Data Engineer``` and ```Senior Data Scientist``` with median salaries of around $150k
+- The ```Machine Learning Engineer``` has lowest median salary , being very close to the Data Analyst jobs in Europe
+- The ```Senior Data Analyst``` doesn't appear on the list, and the conclusion that we can draw from this is that after you gain experiecne as a Data Analyst, you can try to access different fields that are payed better, such as ```Data Scientist or ```Data Engineer```
 
 # Highest Paid & Most Demanded Skills for Data Analysts
 
@@ -183,4 +183,61 @@ ax[1].set_xlim(0,200000)
 - The jobs that pay the most appear much less than the ones that are most demanded on the job postings in Europe
 - The most demanded skills(*Python, SQL and Tableu*) are somewhere in the middle regarding the ammount employers are willing to pay
 - Airflow, Spark and AWS are the skills that are most demanded and pay the best
+
+
+# 4. What are the optimal skills a Data Analyst should know in Europe?
+
+After all the insights that we got from the previous questions , I wanted to identify what is actually the best path a Data Analyst is supposed to take in regards to the skills he has to learn in order to achieve the highest efficiency.
+
+So in order to find out the answer to this question i calculated the salary and the percentage of each job skills and i compared them using a scatter plot.
+
+View my notebook here :[5_Optimal_Skills.ipynb](3_Project/5_Optimal_Skills.ipynb)
+
+## Visualize Data 
+```python
+from adjustText import adjust_text
+from matplotlib.ticker import PercentFormatter
+
+df_skill_demand.plot(kind='scatter', x='skill_percentage', y='median_salary')
+plt.xlabel('Percent of Data Analyst Jobs')
+plt.ylabel('Median Yearly Salary')
+plt.title(f'Most Optimal Skills for Data Analysts in Europe')
+plt.tight_layout()
+```
+## Results 
+![Optimal_Skills](Images\Optimal_Skills_1.png)
+Here we have the base of the visualisation that we are going to improve to get even more insights for the next part
+
+## Insights 
+
+- As we can see from the graph , the most optimal skills for Data Analysts,being closer to the upper right corner in Europe are ```SQL``` , ```Python``` and ```Tableau```, 
+being in at least one third of job postings and havin a median salary of over $90k/year.
+- The skills with the highest pay are ```Looker``` ,```Spark``` and ```AWS``` but they are not as present into the job postings for Data Analysts compared with the basic skills required, meaning that they are more oriented towards specific job postings 
+- The least optimal skills (*Lower left corner*)  are the Microsoft based skills, such as ```Powerpoint``` and ```Word```
+
+# Visualizing Different Technologies
+This is the part where we can see every skill and their related techonoly. We'll add color labels based on the technology (e.g., {Programming: Python}).
+
+## Visualize Data 
+```python
+from adjustText import adjust_text
+from matplotlib.ticker import PercentFormatter
+
+sns.scatterplot(
+    data = df_plot , 
+    x ='skill_percentage' ,
+    y = 'median_salary',
+    hue = 'technology' )
+```
+
+# Results 
+![Optimal_Skills_2](Images/Optimal_Skills_2.png)
+
+A scatter plot visualizing the most optimal skills (high paying & high demand) for data analysts in Europe with color labels for technology. 
+
+# Insights 
+
+- This scatter plot presents the prevalence of ```programming``` and ```analyst tools``` skills among the top optimal Data Analytics skills , occuping 9 of the total of 14.
+- The other two categories of ```cloud``` and ```libraries``` skills (AWS,Azure, and Spark) tend to have the best pay but also the smallest presence among the job postings in Europe.
+- The plot shows that the ```programming``` and some of the analytical tools are the best places into this scatter plot, having a good pay and a good ammount of postings .
 
