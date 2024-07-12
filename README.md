@@ -115,7 +115,7 @@ for i in range(5):
     plt.text(11.2, df_plot.iloc[-1, i], df_plot.columns[i], color='black')
 ```
 ## Results
-![Skill_trend](Images/Skill_Trend.png)
+![Skill_trend](Images\Skill_Trend.png)
 
 # Insights
 
