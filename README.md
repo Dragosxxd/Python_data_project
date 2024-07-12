@@ -115,7 +115,7 @@ for i in range(5):
     plt.text(11.2, df_plot.iloc[-1, i], df_plot.columns[i], color='black')
 ```
 ## Results
-![Skill_trend](Images\Skill_Trend.png)
+![Skill_trend](Images/Skill_Trend.png)
 
 # Insights
 
@@ -124,3 +124,24 @@ for i in range(5):
 - The other tools' demand had some fluctuation over the year but overall they remained steady
 - The data on Europe Data Analyst jobs doesn't give us much information on how the demand for skills is going to change for the next year
 
+
+# How much do the top 6 most popular jobs pay?
+
+To indentify the Top 6 jobs I filtered for the jobs with the most job postings in Europe and ordered them through their median salary, and I tried to find out what is the pay gap between these jobs.
+
+Here is the notebook with all my detailed work : [4_Salary_Analysis.ipynb](3_Project/4_Salary_Analysis.ipynb)
+
+## Visualize the Data
+
+```python
+sns.boxplot(data = df_job_titles , x='salary_year_avg', y='job_title_short',order = df_order,palette = 'light:r')
+sns.set_theme(style = 'ticks')
+plt.xlim(0,270000)
+plt.ylabel('Job Title')
+plt.xlabel('Salary(USD)')
+plt.title('Salary Distribution among the Top 6 Data Jobs in Europe')
+ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y / 1000)}k'))
+```
+
+### Results 
+![Salary](Images\Salary.png)
