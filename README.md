@@ -90,7 +90,7 @@ for i,job_title in enumerate(job_titles):
     sns.barplot(data = df_plot , x='skills_percent',y='job_skills',ax = ax[i] , hue = 'skill_count',legend = False)
 ```
 ## Results 
-![Skills_Demand.png](Images/Skills_Demand.png)
+![Skills_Demand.png](Plots/Skills_Demand.png)
 
 # Insights
 - As we can conclude from the graphs, the most versatile skill in this list is ```Python```, being present in over *60%* of the ```Data Scientist jobs```, in almost *60%* of the ```Data Enginner``` jobs, and in 1 of 3 data Analyst job
@@ -119,7 +119,7 @@ for i in range(5):
     plt.text(11.2, df_plot.iloc[-1, i], df_plot.columns[i], color='black')
 ```
 ## Results
-![Skill_Trend](Images/Skill_Trend.png)
+![Skill_Trend](Plots/Skill_Trend.png)
 
 # Insights
 
@@ -148,7 +148,7 @@ ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y / 1000)}
 ```
 
 ### Results 
-![Salary.png](Images/Salary.png)
+![Salary.png](Plots/Salary.png)
 
 ### Insights
 
@@ -180,7 +180,7 @@ ax[1].set_xlim(0,200000)
 ```
 
 ## Results
-![Highest_paid_vs_most_demanded](Images/Highest_Paid_And_Most_In_Demand_Skills.png)
+![Highest_paid_vs_most_demanded](Plots/Highest_Paid_And_Most_In_Demand_Skills.png)
 
 ## Insights 
 
@@ -209,7 +209,7 @@ plt.title(f'Most Optimal Skills for Data Analysts in Europe')
 plt.tight_layout()
 ```
 ## Results 
-![Optimal_Skills](Images/Optimal_Skills_1.png)
+![Optimal_Skills](Plots/Optimal_Skills_1.png)
 Here we have the base of the visualisation that we are going to improve to get even more insights for the next part
 
 ## Insights 
@@ -235,7 +235,7 @@ sns.scatterplot(
 ```
 
 # Results 
-![Optimal_Skills_2](Images/Optimal_Skills_2.png)
+![Optimal_Skills_2](Plots/Optimal_Skills_2.png)
 
 A scatter plot visualizing the most optimal skills (high paying & high demand) for data analysts in Europe with color labels for technology. 
 
