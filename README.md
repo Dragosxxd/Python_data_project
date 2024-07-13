@@ -16,6 +16,10 @@ The data sourced from [Luke Barousse's Python Course](https://www.youtube.com/wa
 
 4. What are the optimal skills for data analysts to learn? (High Demand AND High Paying)
 
+# Inroductory paper
+
+If you feel like you need some more background before diving into this project feel free to access this project introduction document : [1_EDA_Intro.ipynb](3_Project/1_EDA_Intro.ipynb)
+
 
 # Tools I Used
 - **Python** : The backbone of my analysis, allowing me to analyze the data and find critical insights.I also used the following Python libraries:
